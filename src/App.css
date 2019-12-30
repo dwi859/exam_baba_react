@@ -1,38 +1,284 @@
-.App {
-  text-align: center;
+:root{
+  --mainBlue: #2a2a72;
+  --lightBlue:#009ffd;
+  --mainWhite:#f3f3f3;
+  --mainDark:#232528;
+  --mainYellow:#ffa400;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+body{
+  font-family: "Oswald", sans-serif !important;
+  background: var(--mainWhite)!important;
+  color: var(--mainDark)!important;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+.text-title{
+  font-family: "Permanent Maker", cursive;
+  letter-spacing: 0.3rem;
+  text-transform: uppercase;
+  /* css yang digunakan untuk mengubah huruf besa menjadi huruf kecil */
+}
+
+.text-blue{
+  color: var(--mainBlue);
+}
+
+.text-bright{
+  color: var(--lightBlue);
+}
+
+.btn-black{
+  background: transparent;
+  text-transform: capitalize;
+  font-size: 0.8rem !important;
+  color: var(---mainDark);
+  border-radius: 0 !important;
+  border:0.1rem solid var(--mainDark) !important;
+}
+
+.btn-black:hover{
+  background: var(--mainDark) !important;
+  color: var(--mainWhite) !important;
+}
+
+.cart-icon{
+  cursor: pointer;
+  font-size: 1.2rem;
+  color: var(--mainYellow);
+}
+
+.input {
+  width: 400px;
+  height: 40px;
+  border-radius: 30px;
+  margin-left: 100px;
+}
+.right{
+  font-size: 15px;
+  size:20px;
+  color: white;
+}
+.right-border{
+  font-size: 15px;
+  size:20px;
+  color: white;
+  border-radius: 25px;
+  border-style: solid;
+  border:1px solid;
+  padding: 5px;
+}
+
+.slider{
+  background-image: url("./img/slider.PNG");
+  background-repeat: no-repeat;
+ width: 100%;
+  height: 200px;
+  margin-top: 20px;
+  background-size:cover;
+  background-position:center;
+  position:relative;
+}
+
+.kursus{
+ 
+  width: 100%;
+  min-height: 1000px;
+  margin-top: 20px;
+    overflow: hidden;
+}
+.split{
+  float: left;
+  min-width: 50px;
+  min-height: 30px;
+  margin-left: 20px;
+  margin-right: 20px;
+  padding-top: 20px;
+}
+.split-search{
+  float: right;
+  min-width: 50px;
+  min-height: 30px;
+  margin-left: 20px;
+  margin-right: 20px;
+  padding-top: 20px;
+}
+.filtering{
+  height: 80px;
+  background-color: rgb(236, 236, 236);
+  border-color: gray;
+  border: 1px solid rgb(221, 219, 219);
+}
+.card{
+  border-color : transparent;
+  transition : all 1s linear;
+  color: rgb(177, 20, 20);
+}
+.card-footer{
+  background: transparent;
+  border-top: transparent;
+  transition : all 1s linear;
+  
+}
+&:hover{
+  .card{
+  border: 0.04rem solid rgba(0,0,0,0.2);
+  box-shadow: 2px 2px 5px 0px rgba(0,0,0,0.2);
+  }
+  .card-footer{
+  background: rgba(247,247,247);
   }
 }
+.img-container{
+  position: relative;
+  overflow: hidden;
+}
+.card-img-top{
+  transition: all 1s linear;
+}
+.img-container:hover .card-img-top{
+  transform: scale(1.2);
+}
+.cart-btn{
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  padding: 0.2rem 0.4rem;
+  background: var(--lightBlue);
+  border: none;
+  color: var(--mainWhite);
+  font-size: 1.4rem;
+  border-radius: 0.5rem 0 0 0;
+  transition : all 1s linear;
+  transform: translate(100%, 100%);
+}
+.img-container:hover .cart-btn{
+  transform: translate(0,0);
+}
+.cart-btn:hover{
+  color: var(--mainBlue);
+  cursor:pointer;
+}
+.content{
+  float: left;
+  height: 400px;
+  width: 100%;
+}
+.footer{
+  width: 100%;
+  min-height: 400px;
+  margin-top: 200px;
+  background-color: rgb(59, 59, 59);
+}
+.row{
+  margin: auto;
+}
+.content-footer{
+  margin-top: 40px;
+  color: white;
+  font-size: 18px;
+  width: 100%;
+  float: left;
+}
+.widget{
+  font-size: 13px;
+  list-style-type: none;
+}
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+ul {
+  list-style-type: none;
+  color: white;
+  font-size: 20px;
+  margin-left: 0px;
+}
+h3{
+  font-size: 15px;
+}
+.ab{
+  font-size: 14px;
+  color: white;
+}
+.ac{
+  font-size: 10px;
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
+li{
+  margin-left: -40px;
+  margin-top: 10px;
+  color: white;
+}
+.copyright{
+  margin-top: 300px;
+  width: 100%;
+  min-height: 50px;
+  color: rgb(202, 202, 202);
+  font-size: 10px;
+}
+.copyright-text{
+  margin-top: 50px;
+}
+a{
+  color: white;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.iconcari{
+  float: left;
+  position: relative;
+  z-index: 1;
+  left: -7%;
+  top: 1px;
+  cursor: pointer;
+  width:10px;
+
+
+}
+
+.iconcari img{
+  height: 20px;
+  width: 20px;
+}
+
+.button {
+  background-color: #2a2a72;
+  margin-left:-76px;
+  display: inline-block;
+  font-weight: 400;
+  color: #212529;
+  text-align: center;
+  vertical-align: middle;
+  cursor: pointer;
+  -webkit-user-select: none;
+  user-select: none;
+  background-color: transparent;
+  border: 1px solid transparent;
+  padding: .375rem .75rem;
+  font-size: 1rem;
+  line-height: 1.5;
+  border-radius: 4.25rem;
+  transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+}
+
+.btn-outline-successs {
+  color: #e4e4e4;
+  background-color: #2a2a72;
+  border-color: #180c81;
+}
+hr{
+  background-color: rgb(122, 118, 118);
+  height: 5px;
+}
+.kanan{
+  float:right;
+  
+}
+.harga1{
+  min-width: 50px;
+  float: left;
+  font-size: 13px;
+  color: rgb(190, 190, 190);
+}
+.diskon{
+  min-width: 50px;
+  float: right;
+
 }
